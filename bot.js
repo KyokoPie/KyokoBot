@@ -166,7 +166,7 @@ client.on('message', msg => {
   if (msg.content === '<:kyokoLabu:626047724755615745>') {
 		msg.react('626047724755615745');	
 	}
-  if (msg.content === '<:blackwa:585370278360776704>') {
+  if (msg.content === '<:blackhead:585370278360776704>') {
 		msg.react('585370278360776704');	
 	}
   
@@ -196,9 +196,9 @@ if (msg.author.id === userID) {
  
 break;
 
-case '<:blackwa:585370278360776704>': 
+case '<:blackhead:585370278360776704>': 
 if (msg.author.id === userID) {
-	msg.channel.send('<:blackwa:585370278360776704>');
+	msg.channel.send('<:blackhead:585370278360776704>');
   }
  
 break;
