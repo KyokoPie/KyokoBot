@@ -142,8 +142,8 @@ client.on('message', msg => {
 
         if (msg.content === "噁圖BAD") {
 			msg.channel.bulkDelete(50)
-			.then(() => channel.send("100 messages have been deleted!");
-            );
+			.then(() => channel.send("100 messages have been deleted!"));
+            
         }
 
     }
