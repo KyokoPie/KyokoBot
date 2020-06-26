@@ -156,7 +156,6 @@ client.on('message', msg => {
         }
 }
 
-    }
     if (msg.author.id != userID) {
         if (msg.content === '晚安') {
             msg.reply('滾。...', );
