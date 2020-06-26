@@ -139,23 +139,14 @@ client.on('message', msg => {
                 files: ["https://imas.gamedbs.jp/cg/image_sp/card/l_noframe/e9840742d5600f0b4eeb44094231e27b.jpg"]
             });
         }
+
         if (msg.content === "噁圖BAD") {
-            const channel = msg.channel; // TextChannel object
-            const messageManager = channel.messages; // MessageManager object
-
-            messageManager.fetch({
-                limit: 100
-            }).then((messages) => {
-                // `messages` is a Collection of Message objects
-                messages.forEach((message) => {
-                    message.delete();
-                });
-
-                channel.send("100 messages have been deleted!");
-            });
+			msg.channel.bulkDelete(50)
+			.then(() => channel.send("100 messages have been deleted!");
+            );
         }
-}
 
+    }
     if (msg.author.id != userID) {
         if (msg.content === '晚安') {
             msg.reply('滾。...', );
@@ -337,3 +328,18 @@ client.on('message', (receivedMessage) => {
     }
 })
 
+if (msg.content.toLowerCase() === "噁圖BADtest") {
+    const channel = msg.channel; // TextChannel object
+    const messageManager = channel.messages; // MessageManager object
+
+    messageManager.fetch({
+        limit: 20
+    }).then((messages) => {
+        // `messages` is a Collection of Message objects
+        messages.forEach((message) => {
+            message.delete();
+        });
+
+        channel.send("噁圖BAD :thumbsdown:");
+    });
+}
