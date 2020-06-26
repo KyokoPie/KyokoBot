@@ -139,9 +139,7 @@ client.on('message', msg => {
                 files: ["https://imas.gamedbs.jp/cg/image_sp/card/l_noframe/e9840742d5600f0b4eeb44094231e27b.jpg"]
             });
         }
-        if (msg.content.toLowerCase() === "噁圖BAD") {
-    const channel = msg.channel; // TextChannel object
-    const messageManager = channel.messages; // MessageManager object
+        if (msg.content === "噁圖BAD") {
 
     messageManager.fetch({ limit: 100 }).then((messages) => {
         // `messages` is a Collection of Message objects
