@@ -139,11 +139,11 @@ client.on('message', msg => {
                 files: ["https://imas.gamedbs.jp/cg/image_sp/card/l_noframe/e9840742d5600f0b4eeb44094231e27b.jpg"]
             });
         }
-        if (message.content === 'say') {
-            message.delete({
+        if (msg.content === 'say') {
+            msg.delete({
                 timeout: 10000
             });
-            message.reply('`say!`').then(d_msg => {
+            msg.reply('`say!`').then(d_msg => {
                 d_msg.delete({
                     timeout: 10000
                 })
