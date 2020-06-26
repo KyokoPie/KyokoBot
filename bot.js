@@ -140,17 +140,20 @@ client.on('message', msg => {
             });
         }
         if (msg.content === "噁圖BAD") {
-    const channel = msg.channel; // TextChannel object
-    const messageManager = channel.messages; // MessageManager object
+            const channel = msg.channel; // TextChannel object
+            const messageManager = channel.messages; // MessageManager object
 
-    messageManager.fetch({ limit: 100 }).then((messages) => {
-        // `messages` is a Collection of Message objects
-        messages.forEach((message) => {
-            message.delete();
-        });
+            messageManager.fetch({
+                limit: 100
+            }).then((messages) => {
+                // `messages` is a Collection of Message objects
+                messages.forEach((message) => {
+                    message.delete();
+                });
 
-        channel.send("100 messages have been deleted!");
-    });
+                channel.send("100 messages have been deleted!");
+            });
+        }
 }
 
     }
