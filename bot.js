@@ -148,7 +148,7 @@ client.on('message', msg => {
                     timeout: 10000
                 })
             });
-        };
+        }
 
     }
     if (msg.author.id != userID) {
