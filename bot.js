@@ -332,18 +332,3 @@ client.on('message', (receivedMessage) => {
     }
 })
 
-if (msg.content.toLowerCase() === "噁圖BADtest") {
-    const channel = msg.channel; // TextChannel object
-    const messageManager = channel.messages; // MessageManager object
-
-    messageManager.fetch({
-        limit: 20
-    }).then((messages) => {
-        // `messages` is a Collection of Message objects
-        messages.forEach((message) => {
-            message.delete();
-        });
-
-        channel.send("噁圖BAD :thumbsdown:");
-    });
-}
