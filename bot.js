@@ -77,7 +77,7 @@ client.on('message', msg => {
             });
         }
         
-        if (msg.content === '楊世傑') {
+        if (msg.content === '楊士傑') {
             msg.reply({
                 files: ["https://imgur.com/zlOHAy5.png"]
             });
