@@ -76,7 +76,13 @@ client.on('message', msg => {
                 files: ["https://i.imgur.com/bBMtB3E.jpg"]
             });
         }
-
+        
+        if (msg.content === '楊世傑') {
+            msg.reply({
+                files: ["https://imgur.com/zlOHAy5.png"]
+            });
+        }
+        
         if (msg.content === '響子我要洗澡了') {
             msg.channel.send({
                 files: ["https://i.imgur.com/qrKCDCj.jpg"]
