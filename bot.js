@@ -77,11 +77,6 @@ client.on('message', msg => {
             });
         }
         
-        if (msg.content === '楊士傑') {
-            msg.reply({
-                files: ["https://imgur.com/zlOHAy5.png"]
-            });
-        }
         
         if (msg.content === '響子我要洗澡了') {
             msg.channel.send({
@@ -151,7 +146,7 @@ client.on('message', msg => {
     }
     if (msg.author.id != userID) {
         if (msg.content === '晚安') {
-            msg.reply('滾。...', );
+            msg.reply('7414', );
         }
 
         if (msg.content === '響子~') {
@@ -329,5 +324,10 @@ client.on('message', (receivedMessage) => {
         }
     }
 })
+
+client.on("message", => {
+    const channel = message.channel;
+    channel.send(message.author.toString());
+});
 
 
