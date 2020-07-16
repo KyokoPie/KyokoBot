@@ -214,19 +214,19 @@ client.on('message', msg => {
 
         break;
 
-    case '<:blackhead:585370278360776704>':
-        if (msg.author.id === userID) {
-            msg.channel.send('<:blackhead:585370278360776704>');
-        }
+    //case '<:blackhead:585370278360776704>':
+    //    if (msg.author.id === userID) {
+    //        msg.channel.send('<:blackhead:585370278360776704>');
+    //    }
 
-        break;
+    //    break;
         //:694871400527167508: ///715543684980015195
-    case '<:694871400527167508:715543684980015195>':
-        if (msg.author.id === userID) {
-            msg.channel.send('<:694871400527167508:715543684980015195>');
-        }
+    //case '<:694871400527167508:715543684980015195>':
+    //    if (msg.author.id === userID) {
+    //        msg.channel.send('<:694871400527167508:715543684980015195>');
+    //    }
 
-        break;
+    //    break;
 
     case '那我也要睡啦':
         msg.channel.send('滾!');
