@@ -299,11 +299,11 @@ client.on('message', msg => {
     }
 
    // if (msg.content === "老婆") {
-        var VC = msg.member.voiceChannel;
-        if (!VC)
-            return msg.reply("泓錡我好想你QQ<:kyokoLabu:626047724755615745>")
-            VC.join()
-    };
+    //    var VC = msg.member.voiceChannel;
+     //   if (!VC)
+     //       return msg.reply("泓錡我好想你QQ<:kyokoLabu:626047724755615745>")
+     //       VC.join()
+ //   };
 
 });
 
