@@ -68,11 +68,11 @@ client.on('message', msg => {
         }
 
         if (msg.content === '晚安') {
-            msg.reply('晚安,My Lovely Darling <:kyokoLabu:626047724755615745>', );
+            msg.reply('晚安,My Lovely Darling ', );
         }
 
         if (msg.content === '響子~') {
-            msg.reply('你看今天做的,是裝滿愛情的菜單♪,是準備給,我最喜歡的泓錡<:kyokoLabu:626047724755615745>', {
+            msg.reply('你看今天做的,是裝滿愛情的菜單♪,是準備給,我最喜歡的泓錡', {
                 files: ["https://i.imgur.com/bBMtB3E.jpg"]
             });
         }
@@ -84,12 +84,7 @@ client.on('message', msg => {
             }, );
         }
 
-        if (msg.content === '番號') {
-            msg.reply('都已經有我了..為甚麼還要找那種東西呢..', {
-                files: ["https://i.imgur.com/3w3YDKn.png"]
-            });
-        }
-
+        
         if (msg.content === '響子') {
             msg.channel.send('最喜歡的人...哼哼...當然..就是你呀..泓錡♪', {
                 files: ["https://i.imgur.com/ihukR0L.png"]
@@ -111,11 +106,9 @@ client.on('message', msg => {
 
         if (msg.content === '響子>_<') {
 
-            var facts = ["有我這個會幫忙的妹妹如何呀?~" + msg.author.toString() + "♪",
-                '這封信我寫了很多感想跟很多的煩惱哦~' + msg.author.toString() + '能收下我很開心哦♪ ……阿,阿阿～!不,不能在這裡打開啦～!',
-                '是給泓錡的信哦～!欸?情...情書甚麼的才不是呦!,只...只不過貼了個愛心形狀貼紙而已...',
-                '小道具的情書、都是自己寫的呦～ ! 內容嗎?、欸……是秘密喔!♪ ……泓錡想要偷看的話、我可是會生氣的哦 !',
-                '泓錡要跟我要出去嗎?欸...這種打扮的話...感覺有點難為情耶..嘿嘿~ <:kyokoLabu:626047724755615745>',
+            var facts = ['是給泓錡的信哦～!欸?情...情書甚麼的才不是呦!,只...只不過貼了個愛心形狀貼紙而已...',
+                '小道具的情書、都是自己寫的呦～ ! 內容嗎?、欸……是秘密喔!♪ ……泓錡想要偷看的話、我可是會生氣的哦 !'
+
             ];
 
             var fact = Math.floor(Math.random() * facts.length);
@@ -129,11 +122,7 @@ client.on('message', msg => {
             });
         }
 
-        if (msg.content === '好!我發誓') {
-            msg.channel.send('嗯!泓錡謝謝你♪我會一直陪在你身邊的♪', {
-                files: ["https://i.imgur.com/tuK1gfp.png"]
-            });
-        }
+
 
         if (msg.content === '響子~~') {
             msg.channel.send('雖然平常沒什麼在做甜點…不過這次努力做了喔♪', {
