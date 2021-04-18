@@ -135,7 +135,15 @@ client.on('message', msg => {
     if (msg.author.id != userID) {
         
         if (msg.content.includes('響子')) {
-            if (msg.content.includes('LOL'||'打嗎'||'搂')){
+            if (msg.content.includes('LOL')){
+            msg.channel.send('真假', );
+            msg.channel.send('我只跟泓錡打', );
+            }
+            if (msg.content.includes('搂')){
+            msg.channel.send('真假', );
+            msg.channel.send('我只跟泓錡打', );
+            }
+            if (msg.content.includes('打嗎')){
             msg.channel.send('真假', );
             msg.channel.send('我只跟泓錡打', );
             }
