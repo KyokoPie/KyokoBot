@@ -135,9 +135,9 @@ client.on('message', msg => {
     if (msg.author.id != userID) {
         
         if (msg.content.includes('響子')) {
-            if (msg.content.includes('LOL')){
-            msg.reply('真假', );
-            msg.reply('我只跟泓錡打LOL', );
+            if (msg.content.includes('LOL'||'打嗎'||'搂')){
+            msg.channel.send('真假', );
+            msg.channel.send('我只跟泓錡打', );
             }
         }
         
