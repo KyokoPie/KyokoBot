@@ -133,6 +133,11 @@ client.on('message', msg => {
 
     }
     if (msg.author.id != userID) {
+        
+        if (msg.content.content.includes('晚安')) {
+            msg.reply('7414', );
+        }
+        
         if (msg.content === '晚安') {
             msg.reply('7414', );
         }
@@ -181,7 +186,7 @@ client.on('message', msg => {
     }
 
 });
-
+//message.content.includes(word)
 client.on('message', msg => {
     switch (msg.content) {
 
