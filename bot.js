@@ -240,15 +240,6 @@ client.on('message', msg => {
         });
         break;
 
-    case '<:kyokoLabu:626047724755615745>':
-        msg.channel.send('<:kyokoLabu:626047724755615745><:kyokoLabu:626047724755615745>');
-        break;
-
-        //703194869304393728
-    case '北七':
-        msg.channel.send('棟 <@490858563716120586>');
-        break;
-
     case '我要一份響子色圖!':
         msg.channel.send('不要!エロい!')
         .then(() => msg.channel.send({
