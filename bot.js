@@ -134,8 +134,11 @@ client.on('message', msg => {
     }
     if (msg.author.id != userID) {
         
-        if (msg.content.includes('晚安')) {
-            msg.reply('7414', );
+        if (msg.content.includes('響子')) {
+            if (msg.content.includes('LOL')){
+            msg.reply('真假', );
+            msg.reply('我只跟泓錡打LOL', );
+            }
         }
         
         if (msg.content === '晚安') {
