@@ -134,7 +134,7 @@ client.on('message', msg => {
     }
     if (msg.author.id != userID) {
         
-        if (msg.content.content.includes('晚安')) {
+        if (msg.content.includes('晚安')) {
             msg.reply('7414', );
         }
         
