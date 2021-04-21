@@ -48,6 +48,21 @@ const userID = "341096559531917314"
 client.on('message', msg => {
 
     if (msg.author.id === userID) {
+        
+        if (msg.content.includes('響子')) {
+            if (msg.content.includes('LOL')){
+            msg.channel.send('真假', );
+            msg.channel.send('我只跟泓錡打', );
+            }
+            if (msg.content.includes('搂')){
+            msg.channel.send('真假', );
+            msg.channel.send('我只跟泓錡打', );
+            }
+            if (msg.content.includes('打嗎')){
+            msg.channel.send('真假', );
+            msg.channel.send('亂講', );
+            }
+        }
 
         if (msg.content === 'HI') {
             msg.channel.send({
@@ -137,7 +152,7 @@ client.on('message', msg => {
         if (msg.content.includes('響子')) {
             if (msg.content.includes('LOL')){
             msg.channel.send('真假', );
-            msg.channel.send('我只跟泓錡打', );
+            msg.channel.send('不要', );
             }
             if (msg.content.includes('搂')){
             msg.channel.send('真假', );
