@@ -26,7 +26,7 @@ client.on('guildMemberAdd', async (member) => {
     let y = 0
     ctx.drawImage(background, x, y)
     // Attach the image to a message and send it
-    const attachment = new MessageAttachment(canvas.toBuffer())
+    const attachment = new Discord(canvas.toBuffer())
     channel.send('', attachment)
   })
 
