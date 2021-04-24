@@ -30,7 +30,7 @@ client.on('guildMemberAdd', async member => {
     ctx.drawImage(background, x, y)
     // Attach the image to a message and send it
     const attachment = new MessageAttachment(canvas.toBuffer())
-    client.channels.get("585563158974824448").send('', attachment)
+    message.channel.send('', attachment)
 
     console.log(member.user.tag)
   })
