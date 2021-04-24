@@ -14,7 +14,7 @@ client.on('guildMemberAdd', async (member) => {
     // Access the channel ID for this guild from the cache
     const channelId = 585563158974824448
     // Access the actual channel and send the message
-    const channel = guild.channels.cache.get(channelId)
+    const channel = 585563158974824448
     // Create a canvas and access the 2d context
     const canvas = Canvas.createCanvas(700, 250)
     const ctx = canvas.getContext('2d')
