@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Canvas = require('canvas');
+const path = require('path')
 
 client.on('ready', () => {
     console.log('I am ready!');
