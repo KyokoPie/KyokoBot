@@ -63,7 +63,7 @@ const userID = "341096559531917314"
     const kyoko = client.emojis.get("628166954083155979");
 
 client.on('message', msg => {
-	if (message.content === '!join') {
+	if (msg.content === '!join') {
 	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
 	if (!channel) return;
 
