@@ -2,34 +2,19 @@ const Discord = require('discord.js');
 const { MessageAttachment } = require('discord.js')
 const client = new Discord.Client();
 const Canvas = require('canvas');
-const path = require('path')
+const path = require('path');
+const { welcomeImage } = require('discord-welcome-card');
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on('guildMemberAdd', async (member) => {
-    // Async function
-    // Destructure the guild property from the member object
-    const { guild } = member
-    // Access the channel ID for this guild from the cache
-    const channelId = 585563158974824448
-    // Access the actual channel and send the message
-    const channel = 585563158974824448
-    // Create a canvas and access the 2d context
-    const canvas = Canvas.createCanvas(700, 250)
-    const ctx = canvas.getContext('2d')
-    // Load the background image and draw it to the canvas
-    const background = await Canvas.loadImage(
-      path.join(__dirname, 'test.jpg')
-    )
-    let x = 0
-    let y = 0
-    ctx.drawImage(background, x, y)
-    // Attach the image to a message and send it
-    const attachment = new MessageAttachment(canvas.toBuffer())
-    channel.send('', attachment)
-  })
+client.on("message", async message => {
+    //Generating the actual welcome Card
+    const image = await welcomeImage(message.member);
+
+    message.channel.send(new Discord.MessageAttachment(image, 'test.jpg'))
+});
 
 client.on('guildMemberAdd', member => {
     console.log(member.user.tag)
