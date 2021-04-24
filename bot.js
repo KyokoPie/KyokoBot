@@ -6,6 +6,28 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
+client.on('guildMemberAdd', async (member) => {
+    // Async function
+    // Destructure the guild property from the member object
+    const { guild } = member
+    // Access the channel ID for this guild from the cache
+    const channelId = getChannelId(guild.id)
+    // Access the actual channel and send the message
+    const channel = guild.channels.cache.get(channelId)
+    // Create a canvas and access the 2d context
+    const canvas = Canvas.createCanvas(700, 250)
+    const ctx = canvas.getContext('2d')
+    // Load the background image and draw it to the canvas
+    const background = await Canvas.loadImage(
+      path.join(__dirname, '../test.jpg')
+    )
+    let x = 0
+    let y = 0
+    ctx.drawImage(background, x, y)
+    // Attach the image to a message and send it
+    const attachment = new MessageAttachment(canvas.toBuffer())
+    channel.send('', attachment)
+  })
 
 client.on('guildMemberAdd', member => {
     console.log(member.user.tag)
