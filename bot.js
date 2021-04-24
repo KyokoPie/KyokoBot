@@ -64,8 +64,6 @@ const userID = "341096559531917314"
 
 client.on('message', msg => {
 	if (msg.content === '!join') {
-	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
-	if (!channel) return;
 
 	const canvas = Canvas.createCanvas(700, 250);
 	const ctx = canvas.getContext('2d');
