@@ -14,7 +14,7 @@ client.on('guildMemberAdd', async member => {
 	const ctx = canvas.getContext('2d');
 
 	// Since the image takes time to load, you should await it
-	const background = await Canvas.loadImage('test.jpg');
+	const background = await Canvas.loadImage(./'test.jpg');
 	// This uses the canvas dimensions to stretch the image onto the entire canvas
 	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
 	// Use helpful Attachment class structure to process the file for you
@@ -64,18 +64,9 @@ const userID = "341096559531917314"
 
 client.on('message', msg => {
 	if (msg.content === '!join') {
-
-	const canvas = Canvas.createCanvas(700, 250);
-	const ctx = canvas.getContext('2d');
-
-	// Since the image takes time to load, you should await it
-	const background = Canvas.loadImage('./test.jpg');
-	// This uses the canvas dimensions to stretch the image onto the entire canvas
-	ctx.drawImage(background, 0, 0, canvas.width, canvas.height);
-	// Use helpful Attachment class structure to process the file for you
-	const attachment = new Discord.MessageAttachment(canvas.toBuffer(), 'welcome-image.png');
-
-	channel.send(`Welcome to the server, ${member}!`, attachment);
+		
+	  client.emit('guildMemberAdd', member);
+		
 	}	
 
     if (msg.author.id === userID) {
