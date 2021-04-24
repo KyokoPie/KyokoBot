@@ -65,7 +65,7 @@ const userID = "341096559531917314"
 client.on('message', msg => {
 	if (msg.content === '!join') {
 		
-	  client.emit('guildMemberAdd', member);
+	  client.emit('guildMemberAdd', msg.member)
 		
 	}	
 
