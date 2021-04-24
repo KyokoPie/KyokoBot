@@ -1,20 +1,18 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const { welcomeImage } = require('discord-welcome-card');
 
 client.on('ready', () => {
     console.log('I am ready!');
 });
 
-client.on("message", async message => {
-if(message.author.bot)return
-    //Generating the actual welcome Card
-    const image = await welcomeImage(message.member);
 
-    message.channel.send(new Discord.MessageAttachment(image, 'test.jpg'))
-});
 
 client.on('guildMemberAdd', member => {
+	const channel = member.guild.channels.cache.find(ch => ch.name === 'member-log');
+	if (!channel) return;
+
+	channel.send(`Welcome to the server, ${member}!`);
+
     console.log(member.user.tag)
   })
 
