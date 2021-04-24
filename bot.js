@@ -1,7 +1,5 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const Canvas = require('canvas');
-const path = require('path');
 const { welcomeImage } = require('discord-welcome-card');
 
 client.on('ready', () => {
@@ -9,6 +7,7 @@ client.on('ready', () => {
 });
 
 client.on("message", async message => {
+if(message.author.bot)return
     //Generating the actual welcome Card
     const image = await welcomeImage(message.member);
 
