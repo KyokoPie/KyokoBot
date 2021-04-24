@@ -8,8 +8,11 @@ client.on('ready', () => {
 
 
 client.on('guildMemberAdd', member => {
+	console.log(member.user.tag);
 	const channel = member.guild.channels.find(ch => ch.name === 'member-log');
+	console.log(member.user.tag);
 	if (!channel) return;
+	console.log(member.user.tag);
 
 	channel.send(`Welcome to the server, ${member}!`);
 
