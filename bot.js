@@ -65,7 +65,7 @@ const fury = [
 
 const userID = "341096559531917314"
 
-    const kyoko = client.emojis.get("628166954083155979");
+    const kyoko = client.emojis("628166954083155979");
 
 client.on('message', msg => {
 	if (msg.content === '!join') {
