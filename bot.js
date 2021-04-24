@@ -20,7 +20,7 @@ client.on('guildMemberAdd', async (member) => {
     const ctx = canvas.getContext('2d')
     // Load the background image and draw it to the canvas
     const background = await Canvas.loadImage(
-      path.join(__dirname, '../test.jpg')
+      path.join(__dirname, 'test.jpg')
     )
     let x = 0
     let y = 0
