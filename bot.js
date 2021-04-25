@@ -1,6 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const Canvas = require('canvas');
+const { registerFont, createCanvas } = require('canvas');
 const { MessageAttachment } = require('discord.js')
 const path = require('path')
 
@@ -9,8 +10,9 @@ client.on('ready', () => {
 });
 
 
-
 client.on('guildMemberAdd', async member => {
+     registerFont('TaipeiSansTCBeta-Bold.ttf', { family: 'TaipeiSansTCBeta-Bold' })
+	
 	    // Async function
     // Destructure the guild property from the member object
     const { guild } = member
@@ -40,12 +42,12 @@ client.on('guildMemberAdd', async member => {
     ctx.drawImage(pfp, x, y)
     // Display user text
     ctx.fillStyle = '#ffffff' // White text
-    ctx.font = '35px sans-serif'
+    ctx.font = '35px TaipeiSansTCBeta-Bold'
     let text = `Welcome ${member.user.tag}!`
     x = canvas.width / 2 - ctx.measureText(text).width / 2
     ctx.fillText(text, x, 60 + pfp.height)
     // Display member count
-    ctx.font = '30px sans-serif'
+    ctx.font = '30px TaipeiSansTCBeta-Bold'
     text = `Member #${guild.memberCount}`
     x = canvas.width / 2 - ctx.measureText(text).width / 2
     ctx.fillText(text, x, 100 + pfp.height)	
