@@ -17,7 +17,7 @@ client.on('guildMemberAdd', async member => {
     // Destructure the guild property from the member object
     const { guild } = member
     // Access the channel ID for this guild from the cache
-    const channelId = "587627529784000512"
+    const channelId = "585563158974824448"
     // Access the actual channel and send the message
     const channel = guild.channels.cache.get(channelId)
     // Create a canvas and access the 2d context
@@ -43,11 +43,19 @@ client.on('guildMemberAdd', async member => {
     // Display user text
     ctx.fillStyle = '#ffffff' // White text
     ctx.font = '35px "TaipeiSansTCBeta-Bold"'
+    ctx.shadowColor = "#000";
+    ctx.shadowOffsetX = 3;
+    ctx.shadowOffsetY = 3;
+    ctx.shadowBlur = 15;
     let text = `Welcome ${member.user.tag}!`
     x = canvas.width / 2 - ctx.measureText(text).width / 2
     ctx.fillText(text, x, 60 + pfp.height)
     // Display member count
     ctx.font = '30px "TaipeiSansTCBeta-Bold"'
+    ctx.shadowColor = "#000";
+    ctx.shadowOffsetX = 3;
+    ctx.shadowOffsetY = 3;
+    ctx.shadowBlur = 15;	
     text = `Member #${guild.memberCount}`
     x = canvas.width / 2 - ctx.measureText(text).width / 2
     ctx.fillText(text, x, 100 + pfp.height)	
