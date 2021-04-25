@@ -28,6 +28,27 @@ client.on('guildMemberAdd', async member => {
     let x = 0
     let y = 0
     ctx.drawImage(background, x, y)
+	
+    // Load the user's profile picture and draw it
+    const pfp = await Canvas.loadImage(
+      member.user.displayAvatarURL({
+        format: 'png',
+      })
+    )
+    x = canvas.width / 2 - pfp.width / 2
+    y = 25
+    ctx.drawImage(pfp, x, y)
+    // Display user text
+    ctx.fillStyle = '#ffffff' // White text
+    ctx.font = '35px sans-serif'
+    let text = `Welcome ${member.user.tag}!`
+    x = canvas.width / 2 - ctx.measureText(text).width / 2
+    ctx.fillText(text, x, 60 + pfp.height)
+    // Display member count
+    ctx.font = '30px sans-serif'
+    text = `Member #${guild.memberCount}`
+    x = canvas.width / 2 - ctx.measureText(text).width / 2
+    ctx.fillText(text, x, 100 + pfp.height)	
     // Attach the image to a message and send it
     const attachment = new MessageAttachment(canvas.toBuffer())
     channel.send('', attachment)
