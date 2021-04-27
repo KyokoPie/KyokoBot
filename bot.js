@@ -389,7 +389,7 @@ client.on('message', message => {
   if (isReady && message.content === 'Gotcha Bitch')
   {
   isReady = false;
-  var voiceChannel = message.member.voiceChannel;
+  var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
      const dispatcher = connection.playFile('JimHa.mp3');
