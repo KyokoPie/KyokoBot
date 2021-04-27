@@ -407,13 +407,27 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('Donleave.mp3', {volume: 0.6,});
+     const dispatcher = connection.play('DonLeave.mp3', {volume: 0.6,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
    }).catch(err => console.log(err));
    isReady = true;
   }
+
+  if (isReady && message.content === '金牌凱特')
+  {
+  isReady = false;
+  var voiceChannel = message.member.voice.channel;
+  voiceChannel.join().then(connection =>
+  {
+     const dispatcher = connection.play('glod.mp3', {volume: 0.6,});
+     dispatcher.on("end", end => {
+       voiceChannel.leave();
+       });
+   }).catch(err => console.log(err));
+   isReady = true;
+  }	
   
   if (isReady && message.content === '君棟八仙泛舟')
   {
