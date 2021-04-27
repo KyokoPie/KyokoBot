@@ -392,7 +392,7 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('JimHa.mp3');
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.5,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
