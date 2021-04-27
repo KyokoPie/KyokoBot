@@ -384,7 +384,7 @@ client.on('message', msg => {
 });
 
 var isReady = true;
-var DonHi = 0;
+
 
 client.on('message', message => {
   if (isReady && message.content === '哈哈哈爽啦')
@@ -443,22 +443,29 @@ client.on('message', message => {
    isReady = true;
   }
   
+var DonHi = 0;	
+	
    if (isReady && message.content === '君棟HI')
   {
   DonHi = DonHi++;
-  isReady = false;
+isReady = false;
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
 	 if(DonHi %2 ===0){
-		 const dispatcher = connection.play('Hi1.mp3', {volume: 0.3,});
+	const dispatcher = connection.play('Hi1.mp3', {volume: 0.3,});
+	dispatcher.on("end", end => {
+        voiceChannel.leave();
+         });
 	 }
      else{
-		 const dispatcher = connection.play('Hi2.mp3', {volume: 0.3,});
+	const dispatcher = connection.play('Hi2.mp3', {volume: 0.3,});
+	dispatcher.on("end", end => {
+        voiceChannel.leave();
+         });
+		 
 	 }
-     dispatcher.on("end", end => {
-       voiceChannel.leave();
-       });
+ 
    }).catch(err => console.log(err));
    isReady = true;
   }
