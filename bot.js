@@ -448,18 +448,21 @@ var DonHi = 0;
    if (isReady && message.content === '君棟HI')
   {
   DonHi = ++DonHi;
+console.log(DonHi);	  
 isReady = false;
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
 	 if((DonHi %2) ===0){
-	const dispatcher = connection.play('Hi1.mp3', {volume: 0.3,});
+	const dispatcher = connection.play('Hi1.mp3', {volume: 0.6,});
+	console.log(DonHi);
 	dispatcher.on("end", end => {
         voiceChannel.leave();
          });
 	 }
      else{
-	const dispatcher = connection.play('Hi2.mp3', {volume: 0.3,});
+	const dispatcher = connection.play('Hi2.mp3', {volume: 0.6,});
+	console.log(DonHi);     
 	dispatcher.on("end", end => {
         voiceChannel.leave();
          });
