@@ -452,7 +452,7 @@ isReady = false;
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-	 if(DonHi %2 ===0){
+	 if((DonHi %2) ===0){
 	const dispatcher = connection.play('Hi1.mp3', {volume: 0.3,});
 	dispatcher.on("end", end => {
         voiceChannel.leave();
