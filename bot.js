@@ -389,7 +389,19 @@ var DonHi = 0;
 client.on('message', message => {
  if(message.content === '滾') {
         message.member.voice.channel.leave();
-        message.channel.send(`Thanks for tuning in!`); }	
+   }
+	
+// Somewhere so that it's in an accessible scope
+let timeoutID;
+	
+clearTimeout(timeoutID);	
+
+// After the queue has ended
+timeoutID = setTimeout(() => {
+	message.member.voice.channel.leave();
+  // This will run if the timeout reaches its end
+  // You can adapt the code above to disconnect from the voice channel
+}, 15 * 60 * 1000) // You should use the time in ms	
 	
   if (isReady && message.content === '哈哈哈爽啦')
   {
