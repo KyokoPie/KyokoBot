@@ -445,7 +445,7 @@ client.on('message', message => {
   
    if (isReady && message.content === '君棟HI')
   {
-  DonHi = ++;
+  DonHi = DonHi++;
   isReady = false;
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
