@@ -383,6 +383,24 @@ client.on('message', msg => {
 
 });
 
+var isReady = true;
+
+bot.on('message', message => {
+  if (isReady && message.content === 'Gotcha Bitch')
+  {
+  isReady = false;
+  var voiceChannel = message.member.voiceChannel;
+  voiceChannel.join().then(connection =>
+  {
+     const dispatcher = connection.playFile('JimHa.mp3');
+     dispatcher.on("end", end => {
+       voiceChannel.leave();
+       });
+   }).catch(err => console.log(err));
+   isReady = true;
+  }
+});
+
 client.on('message', (receivedMessage) => {
     // Prevent bot from responding to its own messages
     if (receivedMessage.author == client.user) {
