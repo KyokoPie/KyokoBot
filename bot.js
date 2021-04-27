@@ -384,6 +384,7 @@ client.on('message', msg => {
 });
 
 var isReady = true;
+var DonHi = 0;
 
 client.on('message', message => {
   if (isReady && message.content === '哈哈哈爽啦')
@@ -406,7 +407,7 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('DonLeave.mp3', {volume: 0.6,});
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
@@ -420,7 +421,7 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('ba.mp3', {volume: 0.6,});
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
@@ -434,13 +435,34 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('afternoon.mp3', {volume: 0.6,});
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
    }).catch(err => console.log(err));
    isReady = true;
   }
+  
+   if (isReady && message.content === '君棟HI')
+  {
+  DonHi = ++;
+  isReady = false;
+  var voiceChannel = message.member.voice.channel;
+  voiceChannel.join().then(connection =>
+  {
+	 if(DonHi %2 ===0){
+		 const dispatcher = connection.play('Hi1.mp3', {volume: 0.3,});
+	 }
+     else{
+		 const dispatcher = connection.play('Hi2.mp3', {volume: 0.3,});
+	 }
+     dispatcher.on("end", end => {
+       voiceChannel.leave();
+       });
+   }).catch(err => console.log(err));
+   isReady = true;
+  }
+  
 });
 
 client.on('message', (receivedMessage) => {
