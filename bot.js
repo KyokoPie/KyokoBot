@@ -384,7 +384,7 @@ client.on('message', msg => {
 });
 
 var isReady = true;
-
+var DonHi = 0;	
 
 client.on('message', message => {
   if (isReady && message.content === '哈哈哈爽啦')
@@ -443,7 +443,7 @@ client.on('message', message => {
    isReady = true;
   }
   
-var DonHi = 0;	
+
 	
    if (isReady && message.content === '君棟HI')
   {
