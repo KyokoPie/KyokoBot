@@ -387,9 +387,9 @@ var isReady = true;
 var DonHi = 0;	
 
 client.on('message', message => {
- if(message.content === 'stopstream') {
+ if(message.content === '滾') {
         message.member.voice.channel.leave();
-        message.channel.createMessage(`Thanks for tuning in!`); }	
+        message.channel.send(`Thanks for tuning in!`); }	
 	
   if (isReady && message.content === '哈哈哈爽啦')
   {
