@@ -385,7 +385,7 @@ client.on('message', msg => {
 
 var isReady = true;
 
-bot.on('message', message => {
+client.on('message', message => {
   if (isReady && message.content === 'Gotcha Bitch')
   {
   isReady = false;
