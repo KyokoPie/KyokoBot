@@ -406,7 +406,7 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
+     const dispatcher = connection.play('DonLeave.mp3', {volume: 0.6,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
@@ -420,7 +420,7 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
+     const dispatcher = connection.play('ba.mp3', {volume: 0.6,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
@@ -434,7 +434,7 @@ client.on('message', message => {
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
+     const dispatcher = connection.play('afternoon.mp3', {volume: 0.6,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
