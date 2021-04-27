@@ -399,6 +399,48 @@ client.on('message', message => {
    }).catch(err => console.log(err));
    isReady = true;
   }
+  
+  if (isReady && message.content === '君棟不行等一下要下了')
+  {
+  isReady = false;
+  var voiceChannel = message.member.voice.channel;
+  voiceChannel.join().then(connection =>
+  {
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
+     dispatcher.on("end", end => {
+       voiceChannel.leave();
+       });
+   }).catch(err => console.log(err));
+   isReady = true;
+  }
+  
+  if (isReady && message.content === '君棟八仙泛舟')
+  {
+  isReady = false;
+  var voiceChannel = message.member.voice.channel;
+  voiceChannel.join().then(connection =>
+  {
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
+     dispatcher.on("end", end => {
+       voiceChannel.leave();
+       });
+   }).catch(err => console.log(err));
+   isReady = true;
+  }
+  
+  if (isReady && message.content === '君棟下午出來')
+  {
+  isReady = false;
+  var voiceChannel = message.member.voice.channel;
+  voiceChannel.join().then(connection =>
+  {
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
+     dispatcher.on("end", end => {
+       voiceChannel.leave();
+       });
+   }).catch(err => console.log(err));
+   isReady = true;
+  }
 });
 
 client.on('message', (receivedMessage) => {
