@@ -386,13 +386,13 @@ client.on('message', msg => {
 var isReady = true;
 
 client.on('message', message => {
-  if (isReady && message.content === 'Gotcha Bitch')
+  if (isReady && message.content === '哈哈哈爽啦')
   {
   isReady = false;
   var voiceChannel = message.member.voice.channel;
   voiceChannel.join().then(connection =>
   {
-     const dispatcher = connection.play('JimHa.mp3', {volume: 0.5,});
+     const dispatcher = connection.play('JimHa.mp3', {volume: 0.3,});
      dispatcher.on("end", end => {
        voiceChannel.leave();
        });
