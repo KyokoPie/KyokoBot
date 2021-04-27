@@ -401,7 +401,7 @@ timeoutID = setTimeout(() => {
 	message.member.voice.channel.leave();
   // This will run if the timeout reaches its end
   // You can adapt the code above to disconnect from the voice channel
-}, 10 * 1000) // You should use the time in ms	
+}, 15 * 60 * 1000) // You should use the time in ms	
 	
   if (isReady && message.content === '哈哈哈爽啦')
   {
