@@ -388,7 +388,7 @@ var DonHi = 0;
 
 client.on('message', message => {
  if(message.content === 'stopstream') {
-        client.leaveVoiceChannel(message.member.voiceState.channelID);
+        message.member.voice.channel.leave();
         message.channel.createMessage(`Thanks for tuning in!`); }	
 	
   if (isReady && message.content === '哈哈哈爽啦')
