@@ -387,8 +387,10 @@ var isReady = true;
 var DonHi = 0;	
 
 client.on('message', message => {
-  const serverQueue = queue.get(guild.id);	
-  setTimeout(function() {serverQueue.voiceChannel.leave();}, 30000);	
+ if(message.content === == 'stopstream') {
+        client.leaveVoiceChannel(message.member.voiceState.channelID);
+        message.channel.createMessage(`Thanks for tuning in!`); }	
+	
   if (isReady && message.content === '哈哈哈爽啦')
   {
   isReady = false;
