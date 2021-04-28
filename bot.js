@@ -399,10 +399,15 @@ clearTimeout(timeoutID);
 
 // After the queue has ended
 timeoutID = setTimeout(() => {
-	message.member.voice.channel.leave();
+	if (message.guild.me.voice.channel !== null) {
+                // check if the bot is connected to a voice channel
+                  message.guild.me.voice.channel.leave();
+                  console.log("I have successfully left the voice channel!");
+                }
+	// message.member.voice.channel.leave();
   // This will run if the timeout reaches its end
   // You can adapt the code above to disconnect from the voice channel
-}, 15 * 60 * 1000) // You should use the time in ms	
+}, 5 * 1000) // You should use the time in ms	
 	
   if (isReady && message.content === '哈哈哈爽啦')
   {
