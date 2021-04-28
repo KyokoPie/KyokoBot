@@ -29,6 +29,7 @@ client.on('guildMemberAdd', async member => {
     )
     let x = 0
     let y = 0
+    
     ctx.drawImage(background, x, y)
 	
     // Load the user's profile picture and draw it
