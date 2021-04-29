@@ -205,15 +205,18 @@ client.on('message', msg => {
 
                         var fact = facts[Math.floor(Math.random() * facts.length)]
                         const picture = [
-                                'https://i.imgur.com/ihukR0L.png'
-                        
+                                'https://hidamarirhodonite.kirara.ca/spread/100296.png',
+                                'https://imas.gamedbs.jp/cgss/images/IqPpesz5UIXPE0wsZ317wIouM-LojNDRSdRYfWxxT-U.jpg'
                         ];
+                        var pictureR = [
+                                picture[Math.floor(Math.random() * picture.length)]
+                        ];        
                         //'https://hidamarirhodonite.kirara.ca/spread/100296.png',
                         //https://hidamarirhodonite.kirara.ca/spread/100296.png
                         //[Math.floor(Math.random() * picture.length)]
                         //facts[fact],
                         msg.channel.send(fact, {
-                                files: ["https://hidamarirhodonite.kirara.ca/spread/100296.png"]
+                                file: pictureR
                         });
                 }
 
