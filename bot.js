@@ -203,7 +203,7 @@ client.on('message', msg => {
 
                         ];
 
-                        var fact = Math.floor(Math.random() * facts.length);
+                        var fact = facts[Math.floor(Math.random() * facts.length);]
                         const picture = [
                                 'https://i.imgur.com/ihukR0L.png'
                         
@@ -212,7 +212,7 @@ client.on('message', msg => {
                         //https://hidamarirhodonite.kirara.ca/spread/100296.png
                         //[Math.floor(Math.random() * picture.length)]
                         //facts[fact],
-                        msg.channel.send('最喜歡的人...哼哼...當然..就是你呀..泓錡♪', {
+                        msg.channel.send(fact, {
                                 files: ["https://hidamarirhodonite.kirara.ca/spread/100296.png"]
                         });
                 }
