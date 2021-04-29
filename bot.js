@@ -212,7 +212,7 @@ client.on('message', msg => {
                         //https://hidamarirhodonite.kirara.ca/spread/100296.png
                         //[Math.floor(Math.random() * picture.length)]
                         msg.channel.send(facts[fact], {
-                                file: picture
+                                file: [ 'https://i.imgur.com/ihukR0L.png' ]
                         });
                 }
 
