@@ -205,8 +205,10 @@ client.on('message', msg => {
 
                         var fact = Math.floor(Math.random() * facts.length);
                         const picture = [
-                                'https://hidamarirhodonite.kirara.ca/spread/100296.png',
+                                'https://i.imgur.com/ihukR0L.png'
+                        
                         ];
+                        //'https://hidamarirhodonite.kirara.ca/spread/100296.png',
                         //https://hidamarirhodonite.kirara.ca/spread/100296.png
                         //[Math.floor(Math.random() * picture.length)]
                         msg.channel.send(facts[fact], {
