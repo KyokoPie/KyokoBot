@@ -211,8 +211,9 @@ client.on('message', msg => {
                         //'https://hidamarirhodonite.kirara.ca/spread/100296.png',
                         //https://hidamarirhodonite.kirara.ca/spread/100296.png
                         //[Math.floor(Math.random() * picture.length)]
-                        msg.channel.send(facts[fact], {
-                                file: [ 'https://i.imgur.com/ihukR0L.png' ]
+                        //facts[fact],
+                        msg.channel.send('最喜歡的人...哼哼...當然..就是你呀..泓錡♪', {
+                                files: ["https://i.imgur.com/ihukR0L.png"]
                         });
                 }
 
