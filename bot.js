@@ -203,7 +203,7 @@ client.on('message', msg => {
 
                         ];
 
-                        var fact = facts[Math.floor(Math.random() * facts.length);]
+                        var fact = facts[Math.floor(Math.random() * facts.length)]
                         const picture = [
                                 'https://i.imgur.com/ihukR0L.png'
                         
