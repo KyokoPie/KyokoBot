@@ -215,7 +215,7 @@ client.on('message', msg => {
                         //https://hidamarirhodonite.kirara.ca/spread/100296.png
                         //[Math.floor(Math.random() * picture.length)]
                         //facts[fact],
-                        msg.channel.send(fact, {
+                        msg.channel.send( {
                                 file: picture[Math.floor(Math.random() * picture.length)]
                         });
                 }
