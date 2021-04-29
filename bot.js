@@ -208,9 +208,9 @@ client.on('message', msg => {
                                 'https://hidamarirhodonite.kirara.ca/spread/100296.png',
                         ];
                         //https://hidamarirhodonite.kirara.ca/spread/100296.png
-
+                        //[Math.floor(Math.random() * picture.length)]
                         msg.channel.send(facts[fact], {
-                                file: picture[Math.floor(Math.random() * picture.length)]
+                                file: picture
                         });
                 }
 
