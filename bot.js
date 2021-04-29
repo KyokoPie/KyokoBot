@@ -216,7 +216,7 @@ client.on('message', msg => {
                         //[Math.floor(Math.random() * picture.length)]
                         //facts[fact],
                         msg.channel.send(fact, {
-                                file: pictureR
+                                file: picture[Math.floor(Math.random() * picture.length)
                         });
                 }
 
