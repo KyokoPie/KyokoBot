@@ -213,7 +213,7 @@ client.on('message', msg => {
                         //[Math.floor(Math.random() * picture.length)]
                         //facts[fact],
                         msg.channel.send('最喜歡的人...哼哼...當然..就是你呀..泓錡♪', {
-                                files: ["https://i.imgur.com/ihukR0L.png"]
+                                files: ["https://hidamarirhodonite.kirara.ca/spread/100296.png"]
                         });
                 }
 
