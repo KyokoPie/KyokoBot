@@ -458,6 +458,7 @@ client.on('message', message => {
                 }).catch(err => console.log(err));
                 isReady = true;
         }
+        
 
         if (isReady && message.content === '金牌凱特')
         {
