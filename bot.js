@@ -466,7 +466,7 @@ client.on('message', message => {
                 var voiceChannel = message.member.voice.channel;
                 voiceChannel.join().then(connection =>
                 {
-                        const dispatcher = connection.play('glod.mp3', {
+                        const dispatcher = connection.play('gold.mp3', {
                                 volume: 0.6,
                         });
                         dispatcher.on("end", end => {
