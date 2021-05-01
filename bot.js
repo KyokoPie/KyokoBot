@@ -524,6 +524,38 @@ client.on('message', message => {
                 isReady = true;
         }
 
+        if (isReady && message.content === '君棟怪物不可能在上面')
+        {
+                isReady = false;
+                var voiceChannel = message.member.voice.channel;
+                voiceChannel.join().then(connection =>
+                {
+                        const dispatcher = connection.play('monster.mp3', {
+                                volume: 0.6,
+                        });
+                        dispatcher.on("end", end => {
+                                voiceChannel.leave();
+                        });
+                }).catch(err => console.log(err));
+                isReady = true;
+        }
+
+        if (isReady && message.content === '貓公爵賣掉')
+        {
+                isReady = false;
+                var voiceChannel = message.member.voice.channel;
+                voiceChannel.join().then(connection =>
+                {
+                        const dispatcher = connection.play('salecat.mp3', {
+                                volume: 0.6,
+                        });
+                        dispatcher.on("end", end => {
+                                voiceChannel.leave();
+                        });
+                }).catch(err => console.log(err));
+                isReady = true;
+        }
+
 
 
         if (isReady && message.content === '君棟HI')
