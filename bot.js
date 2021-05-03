@@ -47,6 +47,7 @@ client.on('guildMemberAdd', async member => {
                         format: 'png',
                 })
         )
+        
         x = canvas.width / 2 - pfp.width / 2
         y = 25
         ctx.drawImage(pfp, x, y)
