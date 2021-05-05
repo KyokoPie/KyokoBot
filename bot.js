@@ -71,7 +71,7 @@ client.on('guildMemberAdd', async member => {
         ctx.shadowBlur = 15;
         text = `Member #${guild.memberCount}`
         x = canvas.width / 2 - ctx.measureText(text).width / 2
-        ctx.fillText(text, x, 100 + pfp.height)
+        ctx.fillText(text, x, 100 + 128)
         // Attach the image to a message and send it
         const attachment = new MessageAttachment(canvas.toBuffer())
         channel.send('', attachment)
