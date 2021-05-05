@@ -45,11 +45,11 @@ client.on('guildMemberAdd', async member => {
         
         // Load the user's profile picture and draw it
         const pfp = await Canvas.loadImage(
-                url({
+                member.user.displayAvatarURL({
                         format: 'png',
                 })
         )
-        //member.user.displayAvatarURL
+        
         x = canvas.width / 2 - pfp.width / 2
         y = 25
         ctx.drawImage(pfp, x, y)
