@@ -40,14 +40,16 @@ client.on('guildMemberAdd', async member => {
         let y = 0
 
         ctx.drawImage(background, x, y)
-
+        
+        let url = member.user.AvatarURL == undefined ? member.user.defaultAvatarURL : member.user.avatarURL
+        
         // Load the user's profile picture and draw it
         const pfp = await Canvas.loadImage(
-                member.user.displayAvatarURL({
+                url({
                         format: 'png',
                 })
         )
-        
+        //member.user.displayAvatarURL
         x = canvas.width / 2 - pfp.width / 2
         y = 25
         ctx.drawImage(pfp, x, y)
