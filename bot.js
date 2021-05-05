@@ -46,13 +46,13 @@ client.on('guildMemberAdd', async member => {
         // Load the user's profile picture and draw it
         const pfp = await Canvas.loadImage(
                 member.user.displayAvatarURL({
-                        format: 'jpg',
+                        format: 'jpg',size: 256
                 })
         )
         
         x = canvas.width / 2 - pfp.width / 2
         y = 25
-        ctx.drawImage(pfp, x, y,150,150)
+        ctx.drawImage(pfp, x, y)
         // Display user text
         ctx.fillStyle = '#ffffff' // White text
         ctx.font = '35px "TaipeiSansTCBeta-Bold"'
