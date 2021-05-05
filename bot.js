@@ -46,13 +46,13 @@ client.on('guildMemberAdd', async member => {
         // Load the user's profile picture and draw it
         const pfp = await Canvas.loadImage(
                 member.user.displayAvatarURL({
-                        format: 'png',size: 128
+                        format: 'png'
                 })
         )
         
-        x = canvas.width / 2 - pfp.width / 2
+        x = canvas.width / 2 - 128 / 2
         y = 25
-        ctx.drawImage(pfp, x, y)
+        ctx.drawImage(pfp, x, y,128,128)
         // Display user text
         ctx.fillStyle = '#ffffff' // White text
         ctx.font = '35px "TaipeiSansTCBeta-Bold"'
@@ -62,7 +62,7 @@ client.on('guildMemberAdd', async member => {
         ctx.shadowBlur = 15;
         let text = `Welcome ${member.user.tag}!`
         x = canvas.width / 2 - ctx.measureText(text).width / 2
-        ctx.fillText(text, x, 60 + pfp.height)
+        ctx.fillText(text, x, 60 + 128)
         // Display member count
         ctx.font = '30px "TaipeiSansTCBeta-Bold"'
         ctx.shadowColor = "#000";
