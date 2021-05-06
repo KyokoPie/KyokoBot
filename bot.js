@@ -435,7 +435,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>');
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('JimHa.mp3', {
@@ -445,7 +445,6 @@ client.on('message', message => {
                                 voiceChannel.leave();
                         });
                 }).catch(err => console.log(err));
-                if (!voiceChannel) return message.channel.send("You have to be in a voice channel to use this command");
                 isReady = true;
         }
 
@@ -453,7 +452,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>');
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('DonLeave.mp3', {
@@ -471,7 +470,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>')
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('gold.mp3', {
@@ -488,7 +487,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>')
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('ba.mp3', {
@@ -505,7 +504,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>')
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('grandma.mp3', {
@@ -522,7 +521,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>')
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('afternoon.mp3', {
@@ -539,7 +538,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>')
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('monster.mp3', {
@@ -556,7 +555,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>')
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('salecat.mp3', {
@@ -576,7 +575,7 @@ client.on('message', message => {
                 DonHi = ++DonHi;
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
-                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>')
+                if (!voiceChannel) return message.channel.send('<:blackhead:585370278360776704><:blackhead:585370278360776704>'),isReady = true;
                 voiceChannel.join().then(connection =>
                 {
                         if ((DonHi % 2) === 0) {
