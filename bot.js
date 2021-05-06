@@ -435,6 +435,7 @@ client.on('message', message => {
         {
                 isReady = false;
                 var voiceChannel = message.member.voice.channel;
+                if (!voiceChannel) return message.channel.send("You have to be in a voice channel to use this command");
                 voiceChannel.join().then(connection =>
                 {
                         const dispatcher = connection.play('JimHa.mp3', {
