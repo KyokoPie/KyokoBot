@@ -15,6 +15,7 @@ client.on('ready', () => {
 });
 
 
+
 client.on('guildMemberAdd', async member => {
         registerFont('TaipeiSansTCBeta-Bold.ttf', {
                 family: 'TaipeiSansTCBeta-Bold'
