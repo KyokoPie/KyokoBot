@@ -444,6 +444,7 @@ client.on('message', message => {
                                 voiceChannel.leave();
                         });
                 }).catch(err => console.log(err));
+                if (!voiceChannel) return message.channel.send("You have to be in a voice channel to use this command");
                 isReady = true;
         }
 
