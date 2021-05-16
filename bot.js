@@ -295,9 +295,9 @@ client.on('message', msg => {
     if (msg.content === '<:kyokoLabu:626047724755615745>') {
         msg.react('626047724755615745');
     }
-    if (msg.content === '<:blackhead:585370278360776704>') {
-        msg.react('585370278360776704');
-    }
+   // if (msg.content === '<:blackhead:585370278360776704>') {
+   //     msg.react('585370278360776704');
+    //}
 
 });
 //message.content.includes(word)
