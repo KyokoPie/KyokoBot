@@ -253,7 +253,7 @@ client.on('message', msg => {
         }
 
         if (msg.content === '晚安') {
-            msg.reply('7414', );
+            msg.reply('要滾快滾', );
         }
 
         if (msg.content === '響子~') {
