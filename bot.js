@@ -154,6 +154,11 @@ client.on('message', msg => {
 
             msg.channel.send('H是不行的哦!')
         }
+        if (msg.content === '!SOP') {
+
+            msg.channel.send('手遊SOP 新遊戲衝首發→不錯的開局開始玩→到處推坑→開始課金→一週後發現開局不是很完美開始重刷重玩→完美開局開始玩→開新池就抽爆循環到沒石頭→沒石頭→抽到沒石頭後有送大量石頭或免費十連抽才開遊戲(通常一、兩個月)→數次沒抽到UP角→白癡遊戲 你們自己慢慢玩吧→棄坑→下個新手遊從頭開始')
+        }        
+        
 
         if (msg.content === '老婆') {
             msg.channel.send({
