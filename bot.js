@@ -589,12 +589,12 @@ client.on('message', message => {
 });
 client.on('voiceStateUpdate', (oldMember, newMember) => {
    if (oldMember.member.user.bot) return;
+   if (oldMember.member.user.id === '341096559531917314') return
     
   const channelId = "585563158974824448"   
   
   let newUserChannel = newMember.channelID;
   let oldUserChannel = oldMember.channelID;
-  console.log(newUserChannel,oldUserChannel);
 
 
   if(oldUserChannel === null && newUserChannel !== null) {
