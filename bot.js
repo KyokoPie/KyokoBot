@@ -589,8 +589,7 @@ client.on('message', message => {
 });
 client.on('voiceStateUpdate', (oldMember, newMember) => {
     
-  const channelId = "585563158974824448"
-  const channel = guild.channels.cache.get(channelId)    
+  const channelId = "585563158974824448"   
   
   let newUserChannel = newMember.voiceChannel
   let oldUserChannel = oldMember.voiceChannel
