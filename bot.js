@@ -593,6 +593,7 @@ client.on('voiceStateUpdate', (oldState, newState) => {
   
   let newUserChannel = newState.channel;
   let oldUserChannel = oldState.channel;
+  console.log(newUserChannel,oldUserChannel);
 
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
