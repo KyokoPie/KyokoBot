@@ -587,12 +587,12 @@ client.on('message', message => {
     }
 
 });
-client.on('voiceStateUpdate', (oldState, newState) => {
+client.on('voiceStateUpdate', (oldMember, newMember) => {
     
   const channelId = "585563158974824448"   
   
-  let newUserChannel = newState.voiceChannelID
-  let oldUserChannel = oldState.voiceChannelID
+  let newUserChannel = newMember.voiceChannelID
+  let oldUserChannel = oldMember.voiceChannelID
   console.log(newUserChannel,oldUserChannel);
 
 
