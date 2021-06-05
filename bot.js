@@ -591,8 +591,8 @@ client.on('voiceStateUpdate', (oldState, newState) => {
     
   const channelId = "585563158974824448"   
   
-  let newUserChannel = newState..voice.channel;
-  let oldUserChannel = oldState..voice.channel;
+  let newUserChannel = newState.voice.channel;
+  let oldUserChannel = oldState.voice.channel;
 
 
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
