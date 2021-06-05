@@ -592,7 +592,7 @@ client.on('message', message => {
 var voiceOn = false;
 client.on('message', message => {
     if (message.content === '語音監視器') {
-        if(message.member.roles.has('528268780367773696')) {
+        if(message.member.roles.cache.has('528268780367773696')) {
           console.log(`Yay, the author of the message has the role!`);
             if(voiceOn === true){
                 message.channel.send('領域展開');
