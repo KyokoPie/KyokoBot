@@ -587,6 +587,26 @@ client.on('message', message => {
     }
 
 });
+client.on('voiceStateUpdate', (oldMember, newMember) => {
+  const channelId = "585563158974824448"
+  const channel = guild.channels.cache.get(channelId)    
+  
+  let newUserChannel = newMember.voiceChannel
+  let oldUserChannel = oldMember.voiceChannel
+
+
+  if(oldUserChannel === undefined && newUserChannel !== undefined) {
+
+     // User Joins a voice channel
+      channel.send('安安')
+
+  } else if(newUserChannel === undefined){
+
+    // User leaves a voice channel
+      channel.send('要滾快滾')
+
+  }
+})
 
 client.on('message', (receivedMessage) => {
     // Prevent bot from responding to its own messages
