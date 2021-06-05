@@ -596,12 +596,12 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   console.log(newUserChannel,oldUserChannel);
 
 
-  if(oldUserChannel === undefined && newUserChannel !== undefined) {
+  if(oldUserChannel === null && newUserChannel !== null) {
 
      // User Joins a voice channel
       client.channels.cache.get('585563158974824448').send('安安')
 
-  } else if(newUserChannel === undefined){
+  } else if(newUserChannel === null){
 
     // User leaves a voice channel
       client.channels.cache.get('585563158974824448').send('要滾快滾')
