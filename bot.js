@@ -588,6 +588,7 @@ client.on('message', message => {
 
 });
 client.on('voiceStateUpdate', (oldMember, newMember) => {
+   if (oldMember.member.user.bot) return;
     
   const channelId = "585563158974824448"   
   
