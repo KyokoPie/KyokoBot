@@ -588,9 +588,12 @@ client.on('message', message => {
 
 });
 client.on('voiceStateUpdate', (oldMember, newMember) => {
+    const {
+        guild
+    } = member
   const channelId = "585563158974824448"
   const channel = guild.channels.cache.get(channelId)    
-  const {guild} = member
+  
   let newUserChannel = newMember.voiceChannel
   let oldUserChannel = oldMember.voiceChannel
 
@@ -598,12 +601,12 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   if(oldUserChannel === undefined && newUserChannel !== undefined) {
 
      // User Joins a voice channel
-      channel.send('安安')
+      client.channels.cache.get('585563158974824448').send('安安')
 
   } else if(newUserChannel === undefined){
 
     // User leaves a voice channel
-      channel.send('要滾快滾')
+      client.channels.cache.get('585563158974824448').send('要滾快滾')
 
   }
 })
