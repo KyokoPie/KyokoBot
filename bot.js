@@ -622,12 +622,12 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   if(oldUserChannel === null && newUserChannel !== null) {
 
      // User Joins a voice channel
-      client.channels.cache.get('585563158974824448').send(newMember.member.user.displayName + '安安')
+      client.channels.cache.get('585563158974824448').send(newMember.member.displayName + '安安')
 
   } else if(newUserChannel === null){
 
     // User leaves a voice channel
-      client.channels.cache.get('585563158974824448').send(oldMember.member.user.displayName + '要滾快滾')
+      client.channels.cache.get('585563158974824448').send(oldMember.member.displayName + '要滾快滾')
 
   }
 })
