@@ -595,12 +595,12 @@ client.on('voiceStateUpdate', (oldMember, newMember) => {
   let oldUserChannel = oldMember.voiceChannel
 
 
-  if(oldUserChannel === 585563310196260880 && newUserChannel !== 585563310196260880) {
+  if(oldUserChannel === '585563310196260880' && newUserChannel !== '585563310196260880') {
 
      // User Joins a voice channel
       client.channels.cache.get('585563158974824448').send('安安')
 
-  } else if(newUserChannel === 585563310196260880){
+  } else if(newUserChannel === '585563310196260880'){
 
     // User leaves a voice channel
       client.channels.cache.get('585563158974824448').send('要滾快滾')
