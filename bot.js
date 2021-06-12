@@ -611,27 +611,28 @@ client.on('message', message => {
     }
 });
 client.on('voiceStateUpdate', (oldMember, newMember) => {
-    console.log("1");
+    
+   if(voiceOn === false)return; 
+   if (oldMember.member.user.bot) return;
+   if (oldMember.member.user.id === '341096559531917314') return
+    
     
   const channelId = "585563158974824448"   
   
   let newUserChannel = newMember.channelID;
   let oldUserChannel = oldMember.channelID;
     
-    console.log(oldMember.channelID);
 
 
   if(oldUserChannel === null && newUserChannel !== null) {
 
      // User Joins a voice channel
       client.channels.cache.get('851092958739693598').send(newMember.member.displayName + '安安')
-      console.log('2');
 
   } else if(newUserChannel === null){
 
     // User leaves a voice channel
       client.channels.cache.get('851092958739693598').send(oldMember.member.displayName + '要滾快滾')
-      console.log('3');
 
   }
 })
