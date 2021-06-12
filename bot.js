@@ -597,10 +597,12 @@ client.on('message', message => {
             if(voiceOn === true){
                 message.channel.send('領域關閉');
                 voiceOn = false;    
+                console.log(voiceOn);
             }
             else{
                 message.channel.send('領域展開');
                 voiceOn = true;
+                console.log(voiceOn);
             }            
         } else {
           console.log(`Nope, noppers, nadda.`);
