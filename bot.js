@@ -117,6 +117,7 @@ const fury = [
 ]
 
 const userID = "341096559531917314"
+const userID2 = "341096559531917314"
 
 const kyoko = client.emojis.cache.get("628166954083155979");
 
