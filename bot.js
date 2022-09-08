@@ -14,7 +14,7 @@ client.on('ready', () => {
     console.log('I am ready!');
 });
 
-
+//test
 
 client.on('guildMemberAdd', async member => {
     registerFont('TaipeiSansTCBeta-Bold.ttf', {
